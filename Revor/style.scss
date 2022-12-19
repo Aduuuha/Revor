@@ -1,0 +1,157 @@
+@import 'global';
+
+.header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px;
+
+        @include sm-block {
+            margin: 10px;
+        }
+    }
+
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        height: 30px;
+        width: auto;
+
+        @include sm-block {
+            height: 20px;
+        }
+    }
+
+    &__link {
+        @include sm-block {
+            font-size: 15px;
+        }
+    }
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    @include sm-block {
+        display: none;
+    }
+}
+
+.hero-wrapper {
+    background-image: url(assets/images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 910px;
+    min-height: 100vh;
+    position: relative;
+    background-blend-mode: darken;
+    background-color: rgba(45, 45, 45, 0.6);
+
+    @include sm-block {
+        background-position: 50%;
+    }
+}
+
+.hero-tittle {
+    color: $color-black;
+    font-size: 100px;
+    padding: 230px 240px 20px;
+
+    @include sm-block {
+        font-size: 60px;
+        padding: 140px 45px 100px;
+    }
+}
+
+.hero-text {
+    font-size: 40px;
+    width: 60%;
+    margin: 220px 420px 50px;
+    font-weight: 800;
+    color: $color-black;
+
+    @include sm-block {
+        font-size: 20px;
+        width: 400px;
+        margin: 200px 30px;
+    }
+}
+
+.about-wrapper {
+    margin: 100px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    @include sm-block {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+}
+
+.about-content {
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    border: 2px solid black;
+    padding: 10px 5px;
+
+    &:first-child {
+        grid-column: 1/8;
+    }
+
+    &:nth-child(2) {
+        grid-column: 2/8;
+        grid-row: 2/3;
+    }
+
+    &:nth-child(3) {
+        grid-column: 3/8;
+        grid-row: 3/4;
+    }
+
+    &:nth-child(4) {
+        grid-column: 4/8;
+        grid-row: 4/5;
+    }
+
+    &:nth-child(5) {
+        grid-column: 5/8;
+        grid-row: 5/6;
+    }
+
+    &:last-child {
+        grid-column: 6/8;
+        grid-row: 6/7;
+    }
+
+    &__img {
+        height: 100px;
+        width: auto;
+    }
+
+    &__text-title {
+        font-size: 20px;
+    }
+
+    &__text-subttitle {
+        font-size: 15px;
+    }
+
+    &__text-text {
+        font-size: 10px;
+    }
+}
